@@ -1,19 +1,18 @@
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+
+// webpack development와 production 파일을 나눈다!
+// wepback hash를 사용한 캐시 예제 + clean directory
+// webpack-dev-server 실행
+// 더 나아가서 typescript + react 환경 구성
 
 module.exports = {
-<<<<<<< HEAD
-  entry: "./index.js",
-=======
   entry: "./src/index",
->>>>>>> da50c3b3d88da3b1f2e27f32a53d981fa5eba4b9
   output: {
-    filename: "bundle.[contenthash].js",
+    filename: "bundle.js",
     path: path.resolve(__dirname, "../build")
   },
-  mode: "production",
   module: {
     rules: [
       {
@@ -41,11 +40,7 @@ module.exports = {
     ]
   },
   resolve: {
-<<<<<<< HEAD
-    extensions: [".jsx",".js"]
-=======
     extensions: [".jsx", ".js"]
->>>>>>> da50c3b3d88da3b1f2e27f32a53d981fa5eba4b9
   },
   plugins: [
     new HtmlWebPackPlugin({
@@ -53,8 +48,7 @@ module.exports = {
       filename: "index.html"
     }),
     new MiniCssExtractPlugin({
-      filename: "style.[contenthash].css"
-    }),
-    new CleanWebpackPlugin()
+      filename: "style.css"
+    })
   ]
 };
