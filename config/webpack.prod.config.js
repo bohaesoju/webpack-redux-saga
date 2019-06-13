@@ -4,11 +4,9 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
-<<<<<<< HEAD
+
   entry: "./index.js",
-=======
-  entry: "./src/index",
->>>>>>> da50c3b3d88da3b1f2e27f32a53d981fa5eba4b9
+
   output: {
     filename: "bundle.[contenthash].js",
     path: path.resolve(__dirname, "../build")

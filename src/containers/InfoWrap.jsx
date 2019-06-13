@@ -12,6 +12,7 @@ class InfoWrap extends React.Component {
         return (
             <React.Fragment>
                 <button onClick={() => this.handleGetInfo()}>GetInfo</button>
+                <p>{this.props.data === null ? '널입니다' : this.props.data.body}</p>
             </React.Fragment>
         )
     }
